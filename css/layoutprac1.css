@@ -1,0 +1,24 @@
+* {
+    box-sizing : border-box;
+}
+
+
+
+
+.flex_container {
+    display: flex;
+}
+
+.header {
+    background-color: lightsalmon;
+    padding : 5px;
+}
+
+.nav {
+    background-color: lightskyblue;
+    padding : 5px;
+}
+
+.conent {
+     display: flex;
+}

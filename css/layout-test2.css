@@ -1,0 +1,122 @@
+* {
+    box-sizing : border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+div { 
+    border: 1px solid black;
+}
+/* 모든 div에 검정선 넣는거 */
+
+/* ========================초기값 설정==================== */
+
+
+/* 이거 해줘야 가로로 쌓이는게 세로로 쌓임 */
+.container {
+    display: flex;
+    height: 900px;
+    /* border: 1px solid black;  */
+} 
+
+/* 왼쪽 */
+.container > div:first-child {
+    flex-basis : 20%
+}
+
+/* 오른쪽 */
+.container > div:last-child {
+    flex-basis : 80%
+} 
+
+/* == 오른쪽 */
+.rightBox {
+    /* 새로운 flex부모가 되어야함 */
+    display: flex;
+    /* 각 크기의 점유율 주기 위해서 컬럼 쓰기 */
+    flex-direction: column; 
+}
+
+/* 헤더, 네비 */
+.rightBox > div:nth-child(1),
+.rightBox > div:nth-child(2) {
+    flex-basis: 10%;
+    /* border: 1px solid black; */
+}
+
+/* 콘텐츠(주황) */
+.rightBox > div:nth-child(3) {
+    background-color: orange;
+    flex-basis: 80%;
+    /* border: 1px solid black; */
+}
+
+/* ==콘텐츠(주황)== */
+.orangeBox {
+    /* 새로운 flex 부모 되어야함 */
+    display: flex;
+    padding: 20px;   
+}
+
+/* 빨간 / 파초 박스 */
+.orangeBox > div:nth-child(1),
+.orangeBox > div:nth-child(2) {
+    flex-basis: 50%  
+}
+
+/* 빨간색 */
+.orangeBox > div:nth-child(1) {
+    background-color: red;
+}
+
+
+/* 파초박스 */
+.orangeBox > div:nth-child(2) {
+     /* 새로운 flex 부모가 되어야함 */
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==파초박스 */
+.blueGreenBox > div:nth-child(1) {
+    /* 파란박스 */
+    background-color: blue;
+    flex-basis: 40%;
+    margin: 0px 0px 10px 20px;
+    /* border: 1px solid black; */
+}
+
+.blueGreenBox > div:nth-child(2) {
+    /* 초록박스 */
+    background-color: green;
+    flex-basis: 60%;
+    margin: 10px 0px 0px 20px;
+    /* border: 1px solid black; */
+}
+
+.redBox {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    /* border: 1px solid black; */
+}
+
+.redBox > div:nth-child(1),
+.redBox > div:nth-child(2),
+.redBox > div:nth-child(3),
+.redBox > div:nth-child(4) {
+    flex-basis: 50%;
+    /* wrap으로 줬기때문에 밑으로 내려야되서
+    100이 아닌 50만 줘야함. */
+    background-color: yellow;
+    scale: 0.8;
+    /* border: 1px solid black; */
+    /* 스케일 : 배율. 기본은 1임.
+    작게해주고 싶으면 스케일설정 */
+}
+
+

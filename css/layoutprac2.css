@@ -1,0 +1,51 @@
+
+
+* { box-sizing: border-box;
+ }
+
+ 
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+div { 
+    border: 1px solid black;
+}
+
+.container {
+    height: 900px;
+    display: flex;
+}
+
+.container > div:nth-child(1) {
+    flex-basis : 20%;
+}
+
+.container > div:nth-child(2) {
+    flex-basis : 80%;
+}
+
+.rightBox {
+    display: flex;
+    flex-direction: column; 
+}
+
+.rightBox > div:nth-child(1),
+.rightBox > div:nth-child(2) {
+    flex-basis : 10%;
+}
+
+.rightBox > div:nth-child(3) {
+    flex-basis : 80%;
+}
+
+.orangeBox > div:nth-child(1),
+.orangeBox > div:nth-child(2) {
+    flex-basis : 50%;
+}
+
+
+

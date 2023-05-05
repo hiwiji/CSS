@@ -1,0 +1,31 @@
+div {
+    border: 1px solid black;
+}
+
+.header {
+    height: 10vh;
+}
+
+.nav {
+    height: 5vh;
+}
+
+.main {
+    border: 1px solid red;
+    display: flex;
+    padding: 20px;
+}
+
+.main > div {
+    border: 1px solid blue;
+    height: 20vh;
+    width: 50%;
+
+}
+
+
+
+
+.footer {
+    height: 10vh;
+}

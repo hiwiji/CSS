@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>유튜브화면 만들어보기</title>
+
+    <link rel ="stylesheet" href="css/homework.css">
+
+    <script src="https://kit.fontawesome.com/144f005eaf.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <main>
+        <header>
+            <!-- 메뉴바버튼 -->
+            <button id = "bar" class="fa-solid fa-bars"></button>
+        
+            <!-- 로고 -->
+            <div>
+                <a href="https://www.youtube.com/">
+                <img src="src/유튜브로고.png" id="home-logo">
+                </a>
+            </div>
+            <!-- 공백1 -->
+            <div class="blank1"></div>
+            <!-- 검색창 -->
+            <section>
+                <article class="search-area">
+                    <!-- form 내부 input 태그 값을 서버 또는 페이지로 전달
+                     form에는 이름(name)이 꼭 있어야 한다. 해당 이름값으로 서버에 전달하기 때문에 -->
+                    <form action="#" name="search-form">
+                        <!-- 검색창그룹 -->
+                        <fieldset>
+                            <input type="search" id="query" name="query"
+                                autocomplete="off" placeholder="검색"
+                            >
+                            <!-- 검색버튼 -->
+                            <button id="search-btn" class="fa-solid fa-magnifying-glass"></button>
+                            <!-- 버튼의 초기 기본값은 submit이라 생략 가능 -->
+                        </fieldset>
+                    </form>
+                </article>
+            </section>
+            <!-- 마이크모양 -->
+            <button id="mic" class="fa-solid fa-microphone"></button>
+            <!-- 설정 -->
+            <button id="settings" class="fa-solid fa-ellipsis-vertical"></button>
+            <!-- 로그인 -->
+            <section>
+                <a href="#">
+                <img src="src/로그인.png" id="login">
+                </a>
+            </section>
+        </header>
+
+        <content>
+            <section class="leftMain">
+                <!-- 왼쪽 / 메인영상화면 -->
+                <iframe width="692" height="389" 
+                src="https://www.youtube.com/embed/qaO0Wq3Acfs" 
+                title="NewJeans(뉴진스) - Ditto @인기가요 inkigayo 20230115"
+                frameborder="0" allow="accelerometer; autoplay; 
+                clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen id="뉴진스"></iframe>
+                
+
+                <!-- 글자  -->
+                <div><h3>NewJeans(뉴진스) - OMG @인기가요 inkigayo 20230115</h3></div>
+                <div><img src="src/스브스로고.png" id="sbslogo"> 스브스케이팝 X INKIGAYO <br>구독자 718만명</div>
+                <div><img src="src/구독버튼.png" id="subscript"> </div>
+            </section>
+            <!-- 오른쪽 사이드바 -->
+            <section class="rightMain">
+                <!-- 영상1 -->
+                <div class="movie1">
+                    <div><img src="src/영상이미지1.png" id="movie1"></div>
+                    <div>뉴진스 (NewJeans) _ OMG | 1theKILLPO | 원더킬포 | 킬포</div>
+                        <div>1theK Originals - 원더케이 오리...</div>
+                        <div>조회수 1047만회 1개월 전</div>
+                    
+                </div>
+                <!-- 영상2 -->
+                <div class="movie2">
+                    <div><img src="src/영상이미지2.png" id="movie2"></div>
+                    <div></div>
+                </div>
+                <!-- 영상3 -->
+                <div class="movie3">
+                    <div><img src="src/영상이미지3.png" id="movie3"></div>
+                    <div></div>
+                </div>
+                <!-- 영상4 -->
+                <div class="movie4">
+                    <div><img src="src/영상이미지4.png" id="movie4"></div>
+                    <div></div>
+                </div>
+                <!-- 영상5 -->
+                <div class="movie5">
+                    <div><img src="src/영상이미지5.png" id="movie5"></div>
+                    <div></div>
+                </div>
+                 <!-- 영상6 -->
+                 <div class="movie5">
+                    <div><img src="src/영상이미지6.png" id="movie6"></div>
+                    <div></div>
+                </div>
+
+
+            </section>
+        </content>
+    </main>
+</body>
+</html>

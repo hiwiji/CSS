@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="css/structure2.css">
+
+    <script src="https://kit.fontawesome.com/144f005eaf.js" crossorigin="anonymous"></script>
+</head>
+<body>
+   <!-- 
+        시맨틱(Semantic, 의미) 태그 (-> 의미있는 태그)
+
+        - 기존 영역 분할에 주로 사용되던 div, span 등의 태그는
+        나눈다는 것 이외의 의미를 파악하기 어려움.
+        -> 태그만 봤을 때 태그의 목적을 알 수 없어
+            id 또는 class 반드시 추가해야 한다.
+
+        이런 문제점을 해결하고자
+        1. 태그 이름만으로 어느정도 어떤 역할을 하는지 알 수 있고
+        2. 웹 접근성(SEO) 향상에 도움이 되는 시맨틱 태그가 추가됨.
+    
+        [제공하는 태그]
+
+        header 태그 : 문서의 제목, 머리말 영역
+
+        footer 태그 : 문서의 하단 부분, 꼬리말, 정보 작성 영역 / 메인 바깥에서 사용
+    
+        nav 태그 : 나침반 역할(다른 페이지, 사이트 이동)의 링크 작성 영역
+
+        main 태그 : 현재 문서의 주된 콘텐츠 작성 영역
+
+        section 태그 : 구역 구문을 위한 영역
+
+        article 태그 : 본문과 독립된 콘텐츠를 작성하는 영역(작은 토막)
+
+        aside 태그 : 사이드바(보통 양쪽), 광고영역
+    -->
+
+    <!-- 컨테이너 대신 많이 씀  -->
+    <main>
+        <!-- 헤더부분 -->
+        <header>
+            <!-- 클릭 시 메인 페이지로 이동하는 로고 -->
+            <section>
+                <a href="#">
+                    <img src="src/요생소 로고.png" id="home-logo">
+                </a>
+
+            </section>
+            <!-- 검색 영역 -->
+            <section>
+                <article class="search-area">
+                    <!-- form 내부 input 태그 값을 서버 또는 페이지로 전달
+                     form에는 이름(name)이 꼭 있어야 한다. 해당 이름값으로 서버에 전달하기 때문에 -->
+                    <form action="#" name="search-form">
+
+                        <!-- 검색창그룹 -->
+                        <fieldset>
+                            <input type="search" id="query" name="query"
+                                autocomplete="off" placeholder="검색어를 입력해주세요"
+                            >
+                            <!-- 검색버튼 -->
+                            <button id="search-btn" class="fa-solid fa-magnifying-glass"></button></button>
+                            <!-- 버튼의 초기 기본값은 submit이라 생략 가능 -->
+                        </fieldset>
+                    </form>
+                </article>
+            </section>
+
+            <!-- 공백  -->
+            <section></section>
+        </header>
+
+        <nav>
+            <ul>
+                <li><a href="#">공지사항</a></li>
+                <li><a href="#">자유게시판</a></li>
+                <li><a href="#">질문게시판</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">1:1 문의</a></li>
+            </ul>
+        </nav>
+
+        <!-- 콘텐츠 작성 영역 -->
+        <section class="content">
+            <section class="content-1">
+                <img src="src/스위스.jpg" width="300px" height="240px">
+            </section>
+            
+            <section class="content-2">
+                <form action="#" name ="login-form">
+
+                    <!-- 아이디/비밀번호/로그인버튼 영역 -->
+                    <firldset id ="id-pw-area">
+                        <section>
+                            <input name="inputId" placeholder="아이디">
+                            <input type="password" name="inputPw" placeholder=비밀번호>
+                        </section>
+
+                        <section>
+                            <!-- 로그인 button -->
+                            <button>로그인</button>
+                        </section>
+                    </firldset>
+
+                    <label>
+                        <input type="checkbox" name="saveId"> 아이디저장
+                    </label>
+
+                    <!-- 회원가입 / ID/PW 찾기 영역 -->
+                    <article id="signup-fine-area">
+                        <a href="#"> 회원가입</a>
+                        <span>|</span>
+                        <a href="#"> ID/PW 찾기</a>
+                    </article>
+                </form>
+            </section>
+
+        </section>
+ 
+    </main>
+
+
+    <footer>
+        <P> Copyright &copy; KH Information Dducational Institut A-Class </p>
+            
+        <article>
+            <a hreaf="#"> 프로젝트 소개</a>
+            <span>|</span>
+            <a hreaf="#"> 이용약관</a>
+            <span>|</span>
+            <a hreaf="#">개인정보처리방침</a>
+            <span>|</span>
+            <a hreaf="#">고객센터</a>
+        </article>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+thead {
+    background-color: aqua;
+}
+
+tbody {
+    background-color: orange;
+}
+
+tfoot {
+    background-color: yellow;
+}
+
+tbody th,
+tfoot th {
+    background-color : rgb(255, 0, 212);
+}

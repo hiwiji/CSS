@@ -1,0 +1,50 @@
+#test1 > p:only-child {
+    background-color: steelblue;
+}
+/*목록에 자식이 2개여서 위 코드 실행 안됨 */
+
+
+#test2 > p:only-of-type {
+    background-color: crimson;
+}
+
+#test3 > p:empty {
+    background-color: lime;
+    height: 30px;
+}
+
+
+/* 여러 선택자 동시 선택 */
+#test4-1, #test4-2, .test4-3 {
+    background-color: yellow;
+    border: 3px solid black;
+    margin-bottom : 10px;
+}
+
+/* 특정 요소 내부에 있는 특정 클래스만 선택 */
+
+/* #test5-1의 후손 중 클래스가 c5인 요소 선택 */
+#test5-1 .c5 {
+    background-color: aquamarine;
+}
+
+/* #test5-2의 자식 중 클래스가 c5인 li요소만 선택 */
+#test5-2 > li.c5 {
+    background-color: aqua;
+}
+
+/* #test5-2 > li .c5 {
+    background-color: aqua;
+} */
+
+/*
+#test5-2 > li 띄어쓰기 c5 로 쓰면 
+li의 후손인 c5중에 찾아서 결과값이 9,10만 색칠됨
+*/
+
+
+/* 클래스가 여러개인 요소만 선택 */
+
+.test6.c6 {
+    background-color: red;
+}
